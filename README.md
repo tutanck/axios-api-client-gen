@@ -8,7 +8,7 @@
 ## Install
 
 ```sh
-npm install
+npm i axios-api-client-gen
 ```
 
 ## Run tests
