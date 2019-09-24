@@ -14,6 +14,7 @@
     "express",
     "map",
     "route",
+    "url",
     "automation"
   ],
   "dependencies": {

@@ -1,14 +1,9 @@
-<h1 align="center">Welcome to apiclient 👋</h1>
+<h1 align="center">Welcome to axios-api-client-gen 👋</h1>
 <p>
-  <a href="https://www.npmjs.com/package/apiclient" target="_blank">
-    <img alt="Version" src="https://img.shields.io/npm/v/apiclient.svg">
-  </a>
-  <a href="https://twitter.com/tutanck" target="_blank">
-    <img alt="Twitter: tutanck" src="https://img.shields.io/twitter/follow/tutanck.svg?style=social" />
-  </a>
+  <img alt="Version" src="https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000" />
 </p>
 
-> generate api client from express routes map
+> generate complete api client from express routes map using axios
 
 ## Install
 
