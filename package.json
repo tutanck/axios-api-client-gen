@@ -1,0 +1,24 @@
+{
+  "name": "axios-api-client-gen",
+  "version": "1.0.0",
+  "description": "generate complete api client from express routes map using axios",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "api",
+    "client",
+    "axios",
+    "generator",
+    "express",
+    "map",
+    "route",
+    "automation"
+  ],
+  "dependencies": {
+    "path": "^0.12.7"
+  },
+  "author": "tutanck",
+  "license": "ISC"
+}
