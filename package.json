@@ -1,7 +1,7 @@
 {
   "name": "axios-api-client-gen",
-  "version": "1.0.1",
-  "description": "Generate complete api client from express route map using axios",
+  "version": "1.0.2",
+  "description": "Generate complete api client ",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
