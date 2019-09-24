@@ -3,7 +3,7 @@
   <img alt="Version" src="https://img.shields.io/badge/version-1.0.0-blue.svg?cacheSeconds=2592000" />
 </p>
 
-> generate complete api client from express routes map using axios
+> Generate complete api client from express routes map using axios
 
 ## Install
 
