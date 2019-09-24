@@ -1,10 +1,19 @@
 {
   "name": "axios-api-client-gen",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Generate complete api client from express route map using axios",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "tutanck",
+  "contributors": [
+    "tutanck <tutanck@gmail.com>"
+  ],
+  "license": "ISC",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/tutanck/axios-api-client-gen"
   },
   "keywords": [
     "api",
@@ -19,7 +28,5 @@
   ],
   "dependencies": {
     "path": "^0.12.7"
-  },
-  "author": "tutanck",
-  "license": "ISC"
+  }
 }
