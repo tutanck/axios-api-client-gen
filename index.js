@@ -36,7 +36,9 @@ ${api.map(route => writeService(...route.split(" "))).join("")}
 }
 
 function writeService(method, routeUrl) {
-  return (function(method, routeBase, routeName, routeParams) {
+  console.log(`_${routeUrl}_`);
+  fromRoute(routeUrl);
+  /* return (function(method, routeBase, routeName, routeParams) {
     const lastSeparator = routeParams.length > 0 ? ", " : "";
     return `
 export function ${method}${routeName}(${routeParams.join(
@@ -52,13 +54,18 @@ export function ${method}${routeName}(${routeParams.join(
   });
 }
 `;
-  })(method, ...fromRoute(routeUrl));
+  })(method, ...fromRoute(routeUrl)); */
 }
 
 function fromRoute(routeUrl) {
-  const [routeBase, ...routeParams] = routeUrl.split("/:");
-  const routeName = routeBase.split("/").join("_");
-  return [routeBase, routeName, routeParams];
+  const splittedUrl = routeUrl.split("/");
+  const routeParams = splittedUrl.map(
+    portion => portion.startsWith(":") && portion.str.substring(1)
+  );
+  console.log("routeParams", routeParams);
+  console.log("splittedUrl", splittedUrl);
+  /* const routeName = routeBase.split("/").join("_");*/
+  return [splittedUrl, routeName, routeParams];
 }
 
 module.exports = gen;
