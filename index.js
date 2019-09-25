@@ -59,13 +59,29 @@ export function ${method}${routeName}(${routeParams.join(
 
 function fromRoute(routeUrl) {
   const splittedUrl = routeUrl.split("/");
-  const routeParams = splittedUrl.map(
-    portion => portion.startsWith(":") && portion.str.substring(1)
-  );
+
+  const routeParams = splittedUrl
+    .filter(urlPortion => isRouteParam(urlPortion))
+    .map(urlPortion => getRouteParam(urlPortion));
+
+  const routeName = splittedUrl
+    .map(urlPortion =>
+      isRouteParam(urlPortion) ? urlPortion.replace(":", "by_") : urlPortion
+    )
+    .join("_");
+
   console.log("routeParams", routeParams);
   console.log("splittedUrl", splittedUrl);
-  /* const routeName = routeBase.split("/").join("_");*/
+  console.log("routeName", routeName);
   return [splittedUrl, routeName, routeParams];
+}
+
+function isRouteParam(urlPortion) {
+  return urlPortion.startsWith(":");
+}
+
+function getRouteParam(urlPortion) {
+  return isRouteParam(urlPortion) ? urlPortion.substring(1) : undefined;
 }
 
 module.exports = gen;
