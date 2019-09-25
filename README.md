@@ -42,13 +42,14 @@ With `axios-api-client-gen` you can generate the complete api-client in seconds.
 ```Javascript
 const gen = require('axios-api-client-gen');
 
+// gen(path,apiMap)
 gen('./client/index.js', api);
 
 ```
 
 ## Expected Result
 
-> A file `'./client/index.js'` containing : 
+> A file `'./client/index.js'` containing :
 
 ```Javascript
 // Wed Sep 25 2019 21:44:36 GMT+0200 (GMT+02:00)
@@ -113,7 +114,6 @@ export function delete_users_by_uid_pets_by_pid(uid, pid, ...options) {
 ## 🤝 Contributing
 
 Contributions, issues and feature requests are welcome!<br />I recently fell in ❤️ with issues! <br />Feel free to check [issues page](https://github.com/tutanck/axios-api-client-gen/issues).
-
 
 ## Show your support
 
