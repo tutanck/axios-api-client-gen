@@ -1,6 +1,6 @@
 {
   "name": "axios-api-client-gen",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Generate complete api client from express route map using axios",
   "main": "index.js",
   "scripts": {
