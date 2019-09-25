@@ -42,7 +42,7 @@ With `axios-api-client-gen` you can generate the complete api-client in seconds.
 ```Javascript
 const gen = require('axios-api-client-gen');
 
-// gen(path,apiMap)
+// gen(path, apiMap)
 gen('./client/index.js', api);
 
 ```
