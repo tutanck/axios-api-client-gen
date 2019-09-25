@@ -84,30 +84,3 @@ function getRouteParam(urlPortion) {
 }
 
 module.exports = gen;
-
-//tests
-gen("./client/index.js", {
-  "/users": {
-    get: function(req, res) {
-      res.send("user list");
-    },
-    delete: function(req, res) {
-      res.send("delete users");
-    },
-    "/:uid": {
-      get: function(req, res) {
-        res.send("user " + req.params.uid);
-      },
-      "/pets": {
-        get: function(req, res) {
-          res.send("user " + req.params.uid + "'s pets");
-        },
-        "/:pid": {
-          delete: function(req, res) {
-            res.send("delete " + req.params.uid + "'s pet " + req.params.pid);
-          }
-        }
-      }
-    }
-  }
-});
