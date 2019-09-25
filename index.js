@@ -8,7 +8,7 @@ const gen = function(filePath, routesMap, verbose = true) {
   console.log("Routes : ");
   setApi(api, routesMap, verbose);
 
-  console.log(`generating axios api-client in '${filePath} ..'`);
+  console.log(`\nGenerating api-client in '${filePath} ..'\n`);
 
   try {
     const parentDir = path.dirname(filePath);
@@ -19,7 +19,7 @@ const gen = function(filePath, routesMap, verbose = true) {
 
     fs.writeFileSync(filePath, createFile(api));
 
-    console.log(`[${new Date()}]: ${filePath} was created.`);
+    console.log(`[${new Date()}]: ${filePath} was created.\n`);
   } catch (err) {
     console.error(`[${new Date()}]:`, err.message);
   }
@@ -36,8 +36,6 @@ ${api.map(route => writeService(...route.split(" "))).join("")}
 }
 
 function writeService(method, routeUrl) {
-  console.log(`_${routeUrl}_`);
-
   return (function(method, routeName, routeParams, splittedUrl) {
     const lastSeparator = routeParams.length > 0 ? ", " : "";
     return `
@@ -49,7 +47,9 @@ export function ${method}${routeName}(${routeParams.join(
     method: '${method}',
     url: \`${splittedUrl
       .map(urlPortion =>
-        isRouteParam(urlPortion) ? "${" + getRouteParam(urlPortion) + "}" : urlPortion
+        isRouteParam(urlPortion)
+          ? "${" + getRouteParam(urlPortion) + "}"
+          : urlPortion
       )
       .join("/")}\`,
     ...options,
@@ -72,9 +72,6 @@ function fromRoute(routeUrl) {
     )
     .join("_");
 
-  console.log("routeParams", routeParams);
-  console.log("splittedUrl", splittedUrl);
-  console.log("routeName", routeName);
   return [routeName, routeParams, splittedUrl];
 }
 

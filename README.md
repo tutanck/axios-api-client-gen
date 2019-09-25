@@ -13,7 +13,7 @@ npm i axios-api-client-gen
 
 ## How it works
 
-Asume you have an express route map like this ([see example here](https://github.com/expressjs/express/blob/4.13.1/examples/route-map/index.js#L52-L66)): 
+Asume you have an express route map like this ([see example here](https://github.com/expressjs/express/blob/4.13.1/examples/route-map/index.js#L52-L66)):
 
 ```Javascript
 const api = {
@@ -42,8 +42,65 @@ With `axios-api-client-gen` you can generate the complete api-client in seconds.
 ```Javascript
 const gen = require('axios-api-client-gen');
 
-gen('./path/to/destination/index.js', api);
+gen('./client/index.js', api);
 
+```
+
+## Expected Result
+
+> A file `'./client/index.js'` containing : 
+
+```Javascript
+// Wed Sep 25 2019 21:44:36 GMT+0200 (GMT+02:00)
+
+import axios from 'axios';
+
+const API_BASE_URL = process.env.API_BASE_URL;
+
+export function get_users(...options) {
+  return axios({
+    baseURL: API_BASE_URL,
+    method: 'get',
+    url: `/users`,
+    ...options,
+  });
+}
+
+export function delete_users(...options) {
+  return axios({
+    baseURL: API_BASE_URL,
+    method: 'delete',
+    url: `/users`,
+    ...options,
+  });
+}
+
+export function get_users_by_uid(uid, ...options) {
+  return axios({
+    baseURL: API_BASE_URL,
+    method: 'get',
+    url: `/users/${uid}`,
+    ...options,
+  });
+}
+
+export function get_users_by_uid_pets(uid, ...options) {
+  return axios({
+    baseURL: API_BASE_URL,
+    method: 'get',
+    url: `/users/${uid}/pets`,
+    ...options,
+  });
+}
+
+export function delete_users_by_uid_pets_by_pid(uid, pid, ...options) {
+  return axios({
+    baseURL: API_BASE_URL,
+    method: 'delete',
+    url: `/users/${uid}/pets/${pid}`,
+    ...options,
+  });
+}
 ```
 
 ## Author
