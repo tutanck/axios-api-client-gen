@@ -112,7 +112,7 @@ export function delete_users_by_uid_pets_by_pid(uid, pid, ...options) {
 
 ## 🤝 Contributing
 
-Contributions, issues and feature requests are welcome!<br />Feel free to check [issues page](https://github.com/tutanck/axios-api-client-gen/issues).
+Contributions, issues and feature requests are welcome!<br />I recently fell in ❤️ with issues! <br />Feel free to check [issues page](https://github.com/tutanck/axios-api-client-gen/issues).
 
 
 ## Show your support
