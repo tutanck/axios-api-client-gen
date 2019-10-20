@@ -41,7 +41,7 @@ function writeService(method, routeUrl) {
     return `
 export function ${method}${routeName}(${routeParams.join(
       ", "
-    )}${lastSeparator}...options) {
+    )}${lastSeparator}options) {
   return axios({
     baseURL: API_BASE_URL,
     method: '${method}',
