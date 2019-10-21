@@ -1,6 +1,11 @@
 <h1 align="center">Welcome to axios-api-client-gen 👋</h1>
 <p>
-  <img alt="Version" src="https://img.shields.io/badge/version-1.1.3-blue.svg?cacheSeconds=2592000" />
+  <a href="https://github.com/tutanck/axios-api-client-gen" target="_blank">
+    <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg" />
+  </a>
+  <a href="https://twitter.com/tutanck" target="_blank">
+    <img alt="Twitter: tutanck" src="https://img.shields.io/twitter/follow/tutanck.svg?style=social" />
+  </a>
 </p>
 
 > Generate complete api client from express route map using axios
@@ -52,8 +57,8 @@ gen('./client/index.js', api, true, "MY_API_BASE_URL");
 > A file `'./client/index.js'` containing :
 
 ```Javascript
-// Wed Sep 25 2019 21:44:36 GMT+0200 (GMT+02:00)
-
+// Mon Oct 21 2019 03:32:02 GMT+0200 (GMT+02:00)
+  
 import axios from 'axios';
 
 const API_BASE_URL = process.env.MY_API_BASE_URL;
@@ -104,7 +109,7 @@ export function delete_users_by_uid_pets_by_pid(uid, pid, options) {
 }
 ```
 
-## Full Working Example 
+## Full Working Example
 > You can checkout the full working example [HERE](https://github.com/tutanck/axios-api-client-gen-example)
 
 ## Author
