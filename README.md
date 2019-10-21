@@ -1,6 +1,6 @@
 <h1 align="center">Welcome to axios-api-client-gen 👋</h1>
 <p>
-  <img alt="Version" src="https://img.shields.io/badge/version-1.0.6-blue.svg?cacheSeconds=2592000" />
+  <img alt="Version" src="https://img.shields.io/badge/version-1.1.0-blue.svg?cacheSeconds=2592000" />
 </p>
 
 > Generate complete api client from express route map using axios

@@ -2,7 +2,12 @@ const fs = require("fs");
 const path = require("path");
 const setApi = require("./setApi");
 
-const gen = function(filePath, routesMap, verbose = true) {
+const gen = function(
+  filePath,
+  routesMap,
+  verbose = true,
+  API_BASE_URL = "API_BASE_URL"
+) {
   const api = [];
 
   console.log("Routes : ");
@@ -17,7 +22,7 @@ const gen = function(filePath, routesMap, verbose = true) {
       fs.mkdirSync(parentDir);
     }
 
-    fs.writeFileSync(filePath, createFile(api));
+    fs.writeFileSync(filePath, createFile(api, API_BASE_URL));
 
     console.log(`[${new Date()}]: ${filePath} was created.\n`);
   } catch (err) {
@@ -25,12 +30,12 @@ const gen = function(filePath, routesMap, verbose = true) {
   }
 };
 
-function createFile(api) {
+function createFile(api, API_BASE_URL) {
   return `// ${new Date()}
   
 import axios from 'axios';
 
-const API_BASE_URL = process.env.API_BASE_URL;
+const API_BASE_URL = process.env.${API_BASE_URL};
 ${api.map(route => writeService(...route.split(" "))).join("")}
 `;
 }
