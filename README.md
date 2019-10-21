@@ -1,8 +1,5 @@
 <h1 align="center">Welcome to axios-api-client-gen 👋</h1>
 <p>
-  <a href="https://github.com/tutanck/axios-api-client-gen" target="_blank">
-    <img alt="Documentation" src="https://img.shields.io/badge/documentation-yes-brightgreen.svg" />
-  </a>
   <a href="https://twitter.com/tutanck" target="_blank">
     <img alt="Twitter: tutanck" src="https://img.shields.io/twitter/follow/tutanck.svg?style=social" />
   </a>
