@@ -1,6 +1,6 @@
 <h1 align="center">Welcome to axios-api-client-gen 👋</h1>
 <p>
-  <img alt="Version" src="https://img.shields.io/badge/version-1.1.0-blue.svg?cacheSeconds=2592000" />
+  <img alt="Version" src="https://img.shields.io/badge/version-1.1.1-blue.svg?cacheSeconds=2592000" />
 </p>
 
 > Generate complete api client from express route map using axios
@@ -42,8 +42,8 @@ With `axios-api-client-gen` you can generate the complete api-client in seconds.
 ```Javascript
 const gen = require('axios-api-client-gen');
 
-// gen('path/to/file.js', apiMap)
-gen('./client/index.js', api);
+// gen('path/to/file.js', apiMap, verbose(optional), API_BASE_URL(optional))
+gen('./client/index.js', api, true, "MY_API_URL");
 
 ```
 
